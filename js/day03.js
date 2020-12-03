@@ -348,15 +348,15 @@ function partTwo() {
     // (0, 0) is in the top left corner, starting position
     let allTreesEncountered = [];
     for (let i = 0; i < moves.length; i++) {
-        let xMove = moves[i][0];
-        let yMove = moves[i][1];
+        const xMove = moves[i][0];
+        const yMove = moves[i][1];
         let treesEncountered = 0;
         let xPos = 0;
         for (let yPos = 0; yPos < mapRows.length; yPos += yMove) {
             if (mapRows[yPos].substr(xPos % rowLength, 1) == "#") treesEncountered++;
 
             xPos += xMove; // right xMove
-        } // down yMoe
+        } // down yMove
         allTreesEncountered[i] = treesEncountered;
     }
 
